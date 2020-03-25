@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一个md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-如何搭建个人博客——利用Hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmd/">我的第一个md</a>
+      <a class="article-title" href="/2020/02/18/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E5%88%A9%E7%94%A8Hexo/">利用hexo搭建个人blog</a>
     </h1>
   
 
         
-        <a href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmd/" class="archive-article-date">
+        <a href="/2020/02/18/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E5%88%A9%E7%94%A8Hexo/" class="archive-article-date">
   	<time datetime="2020-02-18T03:22:39.594Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
 </a>
         
@@ -172,7 +172,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="如何搭建个人博客——利用Hexo"><a href="#如何搭建个人博客——利用Hexo" class="headerlink" title="如何搭建个人博客——利用Hexo"></a>如何搭建个人博客——利用Hexo</h1><p>二话不说，直接来干货！</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h5 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h5><p>自行百度，不难</p>
+<h5 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h5><p>自行百度，不难</p>
+<h5 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h5><p>打开cmd（管理员模式） </p>
+<blockquote>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/" target="_blank" rel="noopener">https://registry.npm.taobao.org</a>   </p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>找到一个存放blog的文件夹打开git</p>
+<p>在文件夹目录下：hexo init等待下载</p>
+<p>如果命令行输入hexo有反应，安装成功。</p>
+<p>开始</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览器输入：locathost：40000</p>
+<p>写第一条博客写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n “我的第一条博客”</span><br></pre></td></tr></table></figure>
+
+<h2 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h2><p>在github中新建仓库 注意仓库名字<br>显示文件：ls</p>
+<p>打开文件 ：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<p>在最底端insert</p>
+<p>修改 type：</p>
+<p> gitrepo： <a href="https://github.com/huangtao01/huangtao01.github.io.git" target="_blank" rel="noopener">https://github.com/huangtao01/huangtao01.github.io.git</a></p>
+<p>branch：master</p>
+<p>Esc键后  保存“:wq”<br>推送到远端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新仓库，直接访问 <a href="https://huangtao01.github.io/pwd" target="_blank" rel="noopener">https://huangtao01.github.io/pwd</a> 当前文件夹</p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;my blog name&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>以后每次发布文章都是这两条命令。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   # 生成页面渲染</span><br><span class="line">hexo d   # 部署发布到GitHub Pages</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p>Github上比较流行的主题：简洁和方便，让你更加专注于blog的内容</p>
+<p>克隆到themes目录下</p>
+<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//[github.com/litten/hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia).git themes/yilia</span></span><br></pre></td></tr></table></figure>
+
+<p>修改_config.yml：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<p>修改theme 为 yiliahexo clearhexo ghexo shexo d</p>
+<h2 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h2><p>windows重新注册账户后：hexo打不开，</p>
+<p>bash: hexo: command not found</p>
+<p>解决办法：</p>
+<p>配置环境变量D:\ablog\node_modules.bin在系统变量path下，添加。</p>
+<p>备注：ablog是俺机子上hexo所在文件夹</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;name&quot;       # 新建文章</span><br><span class="line">hexo new page &quot;name&quot;  # 新建页面</span><br><span class="line">hexo g                # 生成页面</span><br><span class="line">hexo d                # 部署</span><br><span class="line">hexo g -d             # 生成页面并部署</span><br><span class="line">hexo s                # 本地预览</span><br><span class="line">hexo clean            # 清除缓存和已生成的静态文件</span><br><span class="line">hexo help             # 帮助</span><br></pre></td></tr></table></figure>
       
 
       
@@ -180,11 +232,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PS3</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Games</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Diary//" class="article-tag-list-link color1">Diary</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAmd/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/18/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E5%88%A9%E7%94%A8Hexo/">展开全文 >></a>
         </p>
       
 
@@ -380,6 +458,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PS3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Games</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
